@@ -20,7 +20,7 @@
               <a class="nav-link light-dark" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link light-dark" href="/dashboard">Dashboard</a>
+             <a class="nav-link light-dark" href="{{getDashLoginURL loggedIn}}">Dashboard</a>
             </li>
             {{#if loggedIn}}
             <li class="nav-item">
@@ -36,7 +36,7 @@
       </div>
 
 
-             <h1 class="app-title"><i class="fab "></i>The Tech Blog</h1>
+            <h1 class="app-title"><i class="fab "></i>{{getHeader loggedIn uRL}}</h1>
     </header>
 
 

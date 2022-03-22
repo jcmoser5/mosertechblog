@@ -7,5 +7,17 @@ module.exports = {
             return `${word}s`;
         }
         return word;
+    },
+    getDashLoginURL: (isLoggedIn) => {
+        if(!isLoggedIn){
+            return `/login`;
+        }
+        return `/dashboard`;
+    },
+    getHeader: (isLoggedIn, uRL) => {
+        if(isLoggedIn && uRL == '/dashboard'){
+            return `Your Dashboard`;
+        }
+        return `The Tech Blog`;
     }
 } 

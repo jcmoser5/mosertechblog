@@ -24,6 +24,9 @@ main {
   padding: 1% 4%;
   color: var(--primary);
 }
+p {
+  margin-bottom:0;
+}
 
 .app-title {
   font-size: 3rem;
@@ -41,14 +44,32 @@ main {
   color: var(--light-dark);
 }
 
-h3 {
+h3{
   color: var(--primary);
+}
+h4 a {
+  color: var(--light-dark);
+}
+h4 a:hover{
+  color: #fff;
 }
 .card {
   margin: 0 0 20px 0;
   border: 2px solid var(--dark);
   border-radius: var(--border-radius);
 }
+.card-header p{
+  color: var(--primary);
+}
+
 .card-body {
     background-color: var(--primary);
+}
+
+.dashboard-link {
+  color: #fff;
+}
+.dashboard-link:hover{
+  font-weight: bold;
+  text-decoration: none;
 }
