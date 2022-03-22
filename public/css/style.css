@@ -1,10 +1,10 @@
 :root {
-  --primary: #d0ddd5;
-  --secondary: #dfe9d9;
-  --tertiary: #7f8888;
-  --light-dark: #9e9a9e;
-  --dark: #201210;
-  --border-radius: .3rem;
+--primary: #d0ddd5;
+--secondary: #dfe9d9;
+--tertiary: #7f8888;
+--light-dark: #9e9a9e;
+--dark: #201210;
+--border-radius: 0.3rem;
 }
 body {
   background-color: var(--primary);
@@ -15,10 +15,13 @@ body {
   line-height: 1.5;
   font-size: 24px;
 }
+main {
+  margin: 20px auto;
+  width: 94%;
+}
 
 .header {
-  padding: 3% 4%;
-  background-color: var(--dark);
+  padding: 1% 4%;
   color: var(--primary);
 }
 
@@ -34,6 +37,18 @@ body {
 .navbar-nav > li > a:hover {
   color: #fff;
 }
-.light-dark{
+.light-dark {
   color: var(--light-dark);
+}
+
+h3 {
+  color: var(--primary);
+}
+.card {
+  margin: 0 0 20px 0;
+  border: 2px solid var(--dark);
+  border-radius: var(--border-radius);
+}
+.card-body {
+    background-color: var(--primary);
 }
