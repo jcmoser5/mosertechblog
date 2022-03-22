@@ -43,6 +43,9 @@ p {
 .light-dark {
   color: var(--light-dark);
 }
+.centered {
+  text-align: center;
+}
 
 h3{
   color: var(--primary);
