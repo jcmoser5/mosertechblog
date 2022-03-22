@@ -3,19 +3,20 @@
 
 {{#if loggedIn}}
 <div class="card">
-    <h3 class="card-header"></h3>
-    <form class="card-body comment-form" id="comment-form">
-
-        <label class="form-label">Comment</label>
-        <input id="comment" name="comment-body" class="form-input" />
-
-        <button type="submit" class="btn">Submit</button>
-    </form>
+   <div class="card-body">
+        <form id="comment-form">
+            <div class="form-group">
+                <label for="comment">Comment</label>
+                <textarea id="comment" class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn text-light bg-secondary btn-block">Submit</button>
+        </form>
+    </div>
 </div>
 {{/if}}
 
 {{> comments post.comments}}
 
 {{#if loggedIn}}
-<script src="/javascript/comment.js"></script>
+<script src="/js/comment.js"></script>
 {{/if}} 
