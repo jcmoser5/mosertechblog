@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
         })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
-            res.render('homepage', { posts, loggedIn: req.session.loggedIn, uRL: req.originalUrl });
+            res.render('homepage', { posts, loggedIn: req.session.loggedIn });
         })
         .catch(err => {
             console.log(err);
@@ -72,7 +72,7 @@ router.get('/post/:id', (req, res) => {
         })
         .then(dbPostData => {
             if (!dbPostData) {
-                res.status(404).json({ message: 'No post found with this id' });
+                res.status(404).json({ message: 'Cannot find post with this id' });
                 return;
             }
             const post = dbPostData.get({ plain: true });
@@ -113,7 +113,7 @@ router.get('/posts-comments', (req, res) => {
         })
         .then(dbPostData => {
             if (!dbPostData) {
-                res.status(404).json({ message: 'No post found with this id' });
+                res.status(404).json({ message: 'Cannot find post with this id' });
                 return;
             }
             const post = dbPostData.get({ plain: true });
@@ -126,4 +126,4 @@ router.get('/posts-comments', (req, res) => {
         });
 });
 
-module.exports = router;
+module.exports = router; 
